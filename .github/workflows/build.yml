@@ -19,7 +19,7 @@ jobs:
           EOF
       - name: Build
         run: ./gradlew assembleDebug
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: stripe-doctor-apk
           path: app/build/outputs/apk/debug/*.apk
