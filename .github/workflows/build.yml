@@ -12,6 +12,8 @@ jobs:
       - uses: android-actions/setup-android@v3
       - name: Fix Gradle files
         run: |
+          echo "android.useAndroidX=true" > gradle.properties
+          echo "android.enableJetifier=true" >> gradle.properties
           cat > settings.gradle << 'EOF'
           rootProject.name = "StripeDoctor"
           include ':app'
