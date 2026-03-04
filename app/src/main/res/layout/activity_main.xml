@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0a0a0a"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚕ STRIPE DOCTOR"
+            android:textColor="#00ff88"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AMOLED Column Driver Correction"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- STATUS -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="○ Overlay inactive"
+            android:textColor="#ffcc00"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- STRIPE POSITION -->
+        <TextView
+            android:id="@+id/tvPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Column position: 720px"
+            android:textColor="#cccccc"
+            android:textSize="13sp"/>
+        <SeekBar
+            android:id="@+id/seekPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="1440"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- STRIPE WIDTH -->
+        <TextView
+            android:id="@+id/tvWidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stripe width: 1px"
+            android:textColor="#cccccc"
+            android:textSize="13sp"/>
+        <SeekBar
+            android:id="@+id/seekWidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            android:layout_marginBottom="12dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#333333" android:layout_marginVertical="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHANNEL CORRECTION"
+            android:textColor="#00ff88"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <!-- GREEN SUBTRACT -->
+        <TextView
+            android:id="@+id/tvGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green subtract: 255"
+            android:textColor="#00ff44"
+            android:textSize="13sp"/>
+        <SeekBar
+            android:id="@+id/seekGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- RED SUBTRACT -->
+        <TextView
+            android:id="@+id/tvRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red subtract: 0"
+            android:textColor="#ff4444"
+            android:textSize="13sp"/>
+        <SeekBar
+            android:id="@+id/seekRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- BLUE SUBTRACT -->
+        <TextView
+            android:id="@+id/tvBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blue subtract: 0"
+            android:textColor="#4488ff"
+            android:textSize="13sp"/>
+        <SeekBar
+            android:id="@+id/seekBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- OPACITY -->
+        <TextView
+            android:id="@+id/tvOpacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Overlay opacity: 128"
+            android:textColor="#cccccc"
+            android:textSize="13sp"/>
+        <SeekBar
+            android:id="@+id/seekOpacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="255"
+            android:layout_marginBottom="16dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#333333" android:layout_marginVertical="8dp"/>
+
+        <!-- CONTROL BUTTONS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="▶ APPLY"
+                android:backgroundTint="#00aa55"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="■ STOP"
+                android:backgroundTint="#aa2222"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#333333" android:layout_marginVertical="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DIAGNOSTIC SCREENS"
+            android:textColor="#00ff88"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap screen to dismiss each diagnostic"
+            android:textColor="#666666"
+            android:textSize="11sp"
+            android:paddingBottom="8dp"/>
+
+        <!-- DIAG ROW 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btnBlack"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="BLACK"
+                android:backgroundTint="#222222" android:layout_marginEnd="4dp"/>
+
+            <Button android:id="@+id/btnWhite"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="WHITE"
+                android:backgroundTint="#888888" android:layout_marginEnd="4dp"/>
+
+            <Button android:id="@+id/btnSolid"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="GREY"
+                android:backgroundTint="#555555"/>
+        </LinearLayout>
+
+        <!-- DIAG ROW 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <Button android:id="@+id/btnRed"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="RED"
+                android:backgroundTint="#aa2222" android:layout_marginEnd="4dp"/>
+
+            <Button android:id="@+id/btnGreen"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="GREEN"
+                android:backgroundTint="#22aa44" android:layout_marginEnd="4dp"/>
+
+            <Button android:id="@+id/btnDiag"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="GRADIENT"
+                android:backgroundTint="#224488"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/btnGrid"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="PIXEL GRID — column position finder"
+            android:backgroundTint="#334455"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
