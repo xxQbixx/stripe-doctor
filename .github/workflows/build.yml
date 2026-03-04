@@ -4,22 +4,43 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-java@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Make gradlew
-        run: gradle wrapper --gradle-version 8.2.1
-      - name: Fix settings
+      - uses: android-actions/setup-android@v3
+      - name: Fix Gradle files
         run: |
           cat > settings.gradle << 'EOF'
           rootProject.name = "StripeDoctor"
           include ':app'
           EOF
+          cat > build.gradle << 'EOF'
+          buildscript {
+              repositories {
+                  google()
+                  mavenCentral()
+              }
+              dependencies {
+                  classpath 'com.android.tools.build:gradle:8.3.0'
+                  classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22'
+              }
+          }
+          allprojects {
+              repositories {
+                  google()
+                  mavenCentral()
+              }
+          }
+          EOF
+      - name: Install specific Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.6'
       - name: Build
-        run: ./gradlew assembleDebug
+        run: gradle assembleDebug
       - uses: actions/upload-artifact@v4
         with:
-          name: stripe-doctor-apk
+          name: stripe-doctor
           path: app/build/outputs/apk/debug/*.apk
